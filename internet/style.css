@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+}
+
+.category-item {
+    flex-grow: 1;
+    border: 1px solid;
+    list-style: none;
+    padding: 0;
+}
