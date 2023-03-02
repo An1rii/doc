@@ -25,6 +25,7 @@ function showProducts(category) {
 }
 
 
+
 function showProductInfo(index) {
     const productInfo = document.getElementById("product-info");
     const product = products[index];
@@ -40,3 +41,5 @@ function buyProduct() {
     document.getElementById("product-info").innerHTML = '<p>Select a product to see more information.</p>';
     document.getElementById("products").innerHTML = "";
 }
+document.getElementById("categories").style.listStyle = "none";
+
