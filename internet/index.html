@@ -32,6 +32,38 @@
     <button id="buy-btn">Buy</button>
 </div>
 </div>
+<form id="order-form">
+    <label for="name">ПІБ покупця:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="city">Місто:</label>
+    <select id="city" name="city" required>
+        <option value=""></option>
+        <option value="Київ">Київ</option>
+        <option value="Львів">Львів</option>
+        <option value="Одеса">Одеса</option>
+    </select><br><br>
+
+    <label for="nova-poshta">Склад Нової Пошти для надсилання:</label>
+    <input type="text" id="nova-poshta" name="nova-poshta" required><br><br>
+
+    <label for="payment-type">Спосіб оплати:</label>
+    <select id="payment-type" name="payment-type" required>
+        <option value=""></option>
+        <option value="післяплата">Післяплата</option>
+        <option value="банківська карта">Банківська карта</option>
+    </select><br><br>
+
+    <label for="quantity">Кількість продукції:</label>
+    <input type="number" id="quantity" name="quantity" required><br><br>
+
+    <label for="comment">Коментар до замовлення:</label><br>
+    <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+
+    <button type="submit" id="submit-btn">Підтвердити замовлення</button>
+</form>
+
+
 </body>
 <script src="app.js"></script>
 

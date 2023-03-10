@@ -48,4 +48,16 @@ const onClick = () => {
 const button = document.getElementById('buy-btn')
 button.onclick = onClick;
 
+document.getElementById("order-form").addEventListener("submit", function(event) {
+    let name = document.getElementById("name").value;
+    let city = document.getElementById("city").value;
+    let novaPoshta = document.getElementById("nova-poshta").value;
+    let paymentType = document.getElementById("payment-type").value;
+    let quantity = document.getElementById("quantity").value;
 
+    if (name === "" || city === "" || novaPoshta === "" || paymentType === "" || quantity === "") {
+        alert("Будь ласка, заповніть всі обов'язкові поля форми.");
+        return false;
+    }
+    return true;
+});
