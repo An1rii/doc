@@ -11,11 +11,14 @@
 <div class="container category-item">
     <h2>Categories</h2>
     <ul id="categories">
-        <li><a href="#" onclick="showProducts('electronics')">Electronics</a></li>
-        <li><a href="#" onclick="showProducts('clothing')">Clothing</a></li>
-        <li><a href="#" onclick="showProducts('books')">Books</a></li>
+        <li><a href="#" id="electronics-link">Electronics</a></li>
+        <li><a href="#" id="clothing-link">Clothing</a></li>
+        <li><a href="#" id="books-link">Books</a></li>
     </ul>
-<div>
+
+    <div id="product"></div>
+
+    <div>
     <h2>Products</h2>
     <ul id="products">
     </ul>
@@ -26,9 +29,10 @@
     <div id="product-info">
         <p>Select a product to see more information.</p>
     </div>
-    <button id="buy-btn" onclick="buyProduct()">Buy</button>
+    <button id="buy-btn">Buy</button>
 </div>
 </div>
-<script src="app.js"></script>
 </body>
+<script src="app.js"></script>
+
 </html>

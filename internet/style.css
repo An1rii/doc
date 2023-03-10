@@ -8,10 +8,15 @@
     border: 1px solid;
     list-style: none;
     padding: 0;
+    height: auto;
+    width: auto;
+    font: italic bold .8em/1.2 Arial, sans-serif;
+
 }
 ul {
     padding: 0;
     list-style-type: none;
+
 }
 
 li {
@@ -19,4 +24,5 @@ li {
 }
 a {
     text-decoration: none;
+    font: italic bold 12px/24px Arial, sans-serif;
 }
