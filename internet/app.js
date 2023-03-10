@@ -42,22 +42,38 @@ showProductInfo = (index) => {
     productInfo.innerHTML = `<p>Name: ${product.name}</p><p>Price: $${product.price}</p>`;
 }
 
-const onClick = () => {
-     alert("you bought a product")
-}
 const button = document.getElementById('buy-btn')
-button.onclick = onClick;
+button.addEventListener('click', () => alert("you bought a product"))
 
-document.getElementById("order-form").addEventListener("submit", function(event) {
-    let name = document.getElementById("name").value;
-    let city = document.getElementById("city").value;
-    let novaPoshta = document.getElementById("nova-poshta").value;
-    let paymentType = document.getElementById("payment-type").value;
-    let quantity = document.getElementById("quantity").value;
+const orderForm = document.querySelector('#order-form');
+const orderTable = document.querySelector('#order-table');
 
-    if (name === "" || city === "" || novaPoshta === "" || paymentType === "" || quantity === "") {
-        alert("Будь ласка, заповніть всі обов'язкові поля форми.");
-        return false;
+orderForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+
+    const name = orderForm.elements.name.value;
+    const city = orderForm.elements.city.value;
+    const postOffice = orderForm.elements.postOffice.value;
+    const paymentMethod = orderForm.elements.paymentMethod.value;
+    const quantity = orderForm.elements.quantity.value;
+    const comment = orderForm.elements.comment.value;
+
+
+    if (!name || !city || !postOffice || !paymentMethod) {
+        alert('Будь ласка, заповніть всі обов\'язкові поля форми');
+        return;
     }
-    return true;
+
+
+    const newRow = orderTable.insertRow();
+    newRow.insertCell().textContent = name;
+    newRow.insertCell().textContent = city;
+    newRow.insertCell().textContent = postOffice;
+    newRow.insertCell().textContent = paymentMethod;
+    newRow.insertCell().textContent = quantity;
+    newRow.insertCell().textContent = comment;
+
+
+    orderForm.reset();
 });
