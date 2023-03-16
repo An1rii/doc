@@ -77,16 +77,6 @@ orderForm.addEventListener('submit', function(event) {
 
     orderForm.reset();
 });
-// Get the date and price of the order from the product information
-const date = new Date().toLocaleDateString();
-const price = parseFloat(document.getElementById('product-info').getAttribute('data-price'));
 
-// Create an order object
-const order = { date, price };
 
-// Push the order to the orders array
-orders.push(order);
-
-// Save the orders array to localStorage
-localStorage.setItem('orders', JSON.stringify(orders));
 
