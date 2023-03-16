@@ -16,7 +16,7 @@
 ul {
     padding: 0;
     list-style-type: none;
-
+    font: italic bold 12px/24px Arial, sans-serif;
 }
 
 li {
@@ -24,5 +24,39 @@ li {
 }
 a {
     text-decoration: none;
-    font: italic bold 12px/24px Arial, sans-serif;
+
+}
+#order-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+button[type="submit"] {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #005fa3;
 }

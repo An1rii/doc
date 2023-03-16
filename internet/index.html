@@ -5,11 +5,13 @@
     <title>Product Catalog</title>
     <link rel="stylesheet" href="style.css">
 
-
 </head>
 <body>
 <div class="container category-item">
-    <h2>Categories</h2>
+    <div class="header">
+        <h2>Categories</h2>
+        <button id="orders-btn">My Orders</button>
+    </div>
     <ul id="categories">
         <li><a href="#" id="electronics-link">Electronics</a></li>
         <li><a href="#" id="clothing-link">Clothing</a></li>
@@ -19,19 +21,26 @@
     <div id="product"></div>
 
     <div>
-    <h2>Products</h2>
-    <ul id="products">
-    </ul>
+        <h2>Products</h2>
+        <ul id="products">
+        </ul>
+    </div>
+
+    <div>
+        <h2>Product Information</h2>
+        <div id="product-info">
+            <p>Select a product to see more information.</p>
+        </div>
+        <button id="buy-btn">Buy</button>
+    </div>
+
+    <div id="orders">
+        <h2>My Orders</h2>
+        <ul id="order-list">
+        </ul>
+    </div>
 </div>
 
-<div>
-    <h2>Product Information</h2>
-    <div id="product-info">
-        <p>Select a product to see more information.</p>
-    </div>
-    <button id="buy-btn">Buy</button>
-</div>
-</div>
 <form id="order-form">
     <label>
         ПІБ покупця:
@@ -83,9 +92,8 @@
         <th>Коментар</th>
     </tr>
 </table>
-
 </body>
     <script src="app.js"></script>
     <script src="data.js"></script>
-
+    <script src="local.js"></script>
 </html>
