@@ -1,3 +1,4 @@
+"use strict"
 const ordersBtn = document.getElementById('orders-btn');
 const categories = document.getElementById('categories');
 const orders = document.getElementById('orders');
@@ -7,7 +8,7 @@ const orderList = document.getElementById('order-list');
 ordersBtn.addEventListener('click', showOrders);
 
 
- showOrders = () => {
+function showOrders() {
 
     categories.style.display = 'none';
     orders.style.display = 'block';
