@@ -1,7 +1,7 @@
 
-showProduct = (category) => {
+ const showProduct = (category) => {
     productsList.innerHTML = "";
-    PRODUCTS.forEach((product, i) => {
+    products.forEach((product, i) => {
         if (product.category === category) {
             const div = document.createElement("div");
             const link = document.createElement("a");
@@ -14,14 +14,14 @@ showProduct = (category) => {
     });
 }
 
-showProductInfo = (index) => {
+ const  showProductInfo = (index) => {
     const productInfo = document.getElementById("product-info");
     document.getElementById("buy-btn").style.display = "none";
     document.getElementById("product-info").innerHTML = '<p>Select a product to see more information.</p>';
     document.getElementById("products").innerHTML = "";
     document.getElementById("categories").style.listStyle = "none";
     document.getElementById("buy-btn").style.display = "block";
-    const product = PRODUCTS[index];
+    const product = products[index];
     productInfo.innerHTML = `<p>Name: ${product.name}</p><p>Price: $${product.price}</p>`;
 }
 

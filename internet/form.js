@@ -1,3 +1,4 @@
+"use strict"
 const orderForm = document.querySelector('#order-form');
 const orderTable = document.querySelector('#order-table');
 
