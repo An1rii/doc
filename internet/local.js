@@ -93,3 +93,10 @@ document.getElementById('orders-btn').addEventListener('click', function() {
     orders.style.display = 'block';
     renderOrders();
 });
+function saveOrder(order) {
+    const isOrderAlreadySaved = orders.find(savedOrder => savedOrder.name === order.name && savedOrder.price === order.price && savedOrder.category === order.category);
+    if (!isOrderAlreadySaved) {
+        orders.push(order);
+        localStorage.setItem('orders', JSON.stringify(orders));
+    }
+}
