@@ -26,7 +26,7 @@
 }
 
 const button = document.getElementById('buy-btn')
-button.addEventListener('click', () => alert("Product name here"))
+button.addEventListener('click', () => alert("You bought product Product name here"))
 
 
 
