@@ -25,8 +25,11 @@
     productInfo.innerHTML = `<p>Name: ${product.name}</p><p>Price: $${product.price}</p>`;
 }
 
-const button = document.getElementById('buy-btn')
-button.addEventListener('click', () => alert("You bought product"))
+ const button = document.getElementById('buy-btn');
+ button.addEventListener('click', () => {
+     const product = products.find(product => product.id === 20);
+     alert(`You bought ${product.name}`);
+ });
 
 
 
