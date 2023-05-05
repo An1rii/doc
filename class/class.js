@@ -1,5 +1,5 @@
 
-class Hamburger {
+class HamBurger {
     constructor(size) {
         this.size = size;
         this.price = 0;
@@ -41,7 +41,7 @@ class Hamburger {
 }
 
 
-const hamburger = new Hamburger("small");
+const hamburger = new HamBurger("small");
 hamburger.addOption("cheese");
 hamburger.addOption("spices");
 
